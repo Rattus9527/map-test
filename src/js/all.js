@@ -298,7 +298,7 @@ function changeHandContent(chooseHand, x) {
 }
 function checkSolve() {
   if (rightHand.textContent == leftHand.textContent) {
-    if (step == 6) {
+    if (step <= 6) {
       solve.classList.add("display");
     } else {
       solve.textContent = "步數過多";
