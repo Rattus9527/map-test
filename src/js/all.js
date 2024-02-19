@@ -34,6 +34,7 @@ let block5Enable = false;
 let block6Enable = false;
 let block7Enable = false;
 let leftHandPath = [1];
+let step = 0;
 
 leftHand.addEventListener("click", () => {
   choosenHand = "leftHand";
@@ -259,7 +260,7 @@ function showPath(x, y) {
           addPath(block1);
           block1Enable = true;
           break;
-        case 5:
+        case "5":
           addPath(road1_7);
           addPath(block1);
           block1Enable = true;
@@ -297,7 +298,12 @@ function changeHandContent(chooseHand, x) {
 }
 function checkSolve() {
   if (rightHand.textContent == leftHand.textContent) {
-    solve.classList.add("display");
+    if (step == 6) {
+      solve.classList.add("display");
+    } else {
+      solve.textContent = "步數過多";
+      solve.classList.add("display");
+    }
   }
 }
 function setAllEnable() {
@@ -315,6 +321,7 @@ block1.addEventListener("click", () => {
     changeHandContent(choosenHand, 1);
     clearPath();
     setAllEnable();
+    step += 1;
   }
 });
 block2.addEventListener("click", () => {
@@ -323,6 +330,7 @@ block2.addEventListener("click", () => {
     clearPath();
     checkSolve();
     setAllEnable();
+    step += 1;
   }
 });
 block3.addEventListener("click", () => {
@@ -331,6 +339,7 @@ block3.addEventListener("click", () => {
     clearPath();
     checkSolve();
     setAllEnable();
+    step += 1;
   }
 });
 block4.addEventListener("click", () => {
@@ -339,13 +348,17 @@ block4.addEventListener("click", () => {
     clearPath();
     checkSolve();
     setAllEnable();
+    step += 1;
   }
 });
 block5.addEventListener("click", () => {
-  changeHandContent(choosenHand, 5);
-  clearPath();
-  checkSolve();
-  setAllEnable();
+  if (block5Enable) {
+    changeHandContent(choosenHand, 5);
+    clearPath();
+    checkSolve();
+    setAllEnable();
+    step += 1;
+  }
 });
 block6.addEventListener("click", () => {
   if (block6Enable) {
@@ -353,6 +366,7 @@ block6.addEventListener("click", () => {
     clearPath();
     checkSolve();
     setAllEnable();
+    step += 1;
   }
 });
 block7.addEventListener("click", () => {
@@ -361,5 +375,6 @@ block7.addEventListener("click", () => {
     clearPath();
     checkSolve();
     setAllEnable();
+    step += 1;
   }
 });
