@@ -1,0 +1,168 @@
+@charset "UTF-8";
+.left-hand {
+  position: absolute;
+  left: 20px;
+  top: 300px;
+  font-size: 50px;
+}
+.left-hand::before {
+  content: "左手";
+  font-size: 16px;
+}
+
+.right-hand {
+  position: absolute;
+  right: 20px;
+  top: 300px;
+  font-size: 50px;
+}
+.right-hand::after {
+  content: "右手";
+  font-size: 16px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .map {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  border: 1px solid #000;
+}
+
+.block {
+  position: absolute;
+}
+.block img {
+  width: 80px;
+}
+.block-1 {
+  top: 100px;
+  left: 150px;
+}
+.block-2 {
+  top: 40px;
+  left: 300px;
+}
+.block-3 {
+  top: 70px;
+  left: 450px;
+}
+.block-4 {
+  top: 200px;
+  left: 530px;
+}
+.block-5 {
+  top: 300px;
+  left: 450px;
+}
+.block-6 {
+  top: 200px;
+  left: 300px;
+}
+.block-7 {
+  left: 190px;
+  top: 300px;
+}
+
+.road {
+  position: absolute;
+  z-index: -1;
+}
+.road img {
+  width: 100px;
+}
+.road1-2 {
+  top: 100px;
+  left: 230px;
+}
+.road1-2 img {
+  width: 100px;
+}
+.road1-6 {
+  top: 160px;
+  left: 210px;
+}
+.road1-6 img {
+  width: 80px;
+}
+.road1-7 {
+  top: 180px;
+  left: 180px;
+}
+.road1-7 img {
+  width: 45px;
+}
+.road2-3 {
+  top: 60px;
+  left: 380px;
+}
+.road2-3 img {
+  width: 80px;
+}
+.road3-4 {
+  top: 120px;
+  left: 520px;
+}
+.road3-4 img {
+  width: 60px;
+}
+.road3-5 {
+  top: 180px;
+  left: 470px;
+}
+.road3-5 img {
+  width: 50px;
+}
+.road3-6 {
+  left: 380px;
+  top: 170px;
+}
+.road3-6 img {
+  width: 80px;
+}
+.road4-5 {
+  top: 250px;
+  left: 520px;
+}
+.road4-5 img {
+  width: 80px;
+}
+.road5-6 {
+  top: 280px;
+  left: 380px;
+}
+.road5-6 img {
+  width: 80px;
+}
+.road5-7 {
+  top: 350px;
+  left: 280px;
+}
+.road5-7 img {
+  width: 180px;
+}
+
+.path {
+  box-shadow: 0 0 2px #ff0000;
+}
+
+.solve {
+  display: none;
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  bottom: 50px;
+  left: 300px;
+  padding: 10px 40px;
+  border: 1px solid #000;
+}
+
+.display {
+  display: block;
+}/*# sourceMappingURL=all.css.map */
